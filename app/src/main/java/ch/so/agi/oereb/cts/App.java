@@ -14,9 +14,9 @@ public class App {
     
     public static void main(String[] args) {
         Map<String,String> params = new HashMap<String,String>();
-        params.put("browserName", "Firefox");
-        params.put("remoteUrl", "");
-        params.put("domain", "http://www.google.com");
+        params.put("baseUrl", "https://prozessor-oereb.ur.ch/oereb/");
+        params.put("enCoord", "2690481.2,1195464.8");
+        params.put("gnssCoord", "46.90413,8.62621");
 
         
         
@@ -35,7 +35,7 @@ public class App {
         TestNG tng = new TestNG();
         tng.setXmlSuites(suites);
         
-        tng.setOutputDirectory("/Users/stefan/tmp/");
+        //tng.setOutputDirectory("/Users/stefan/tmp/");
 
         tng.run();
         
