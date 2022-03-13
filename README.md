@@ -7,3 +7,4 @@
 - assertion message?
 - groups?
 - anstelle von Klassen kann man ganze Pakete angeben.
+- javadoc zum Dokumentieren verwenden. Siehe ets-...
