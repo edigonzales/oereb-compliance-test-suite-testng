@@ -17,6 +17,9 @@ public class App {
         params.put("baseUrl", "https://prozessor-oereb.ur.ch/oereb/");
         params.put("enCoord", "2690481.2,1195464.8");
         params.put("gnssCoord", "46.90413,8.62621");
+        params.put("gnssUrl", "https://prozessor-oereb.ur.ch/oereb/?gnss=46.90413,8.62621");
+        params.put("enUrl", "https://prozessor-oereb.ur.ch/oereb/?gnss=46.90413,8.62621");
+        params.put("enUrlWithParam", "https://prozessor-oereb.ur.ch/oereb/getegrid?gnss=46.90413,8.62621");
 
         
         
@@ -27,7 +30,7 @@ public class App {
         test.setName("XML");
         test.setParameters(params);
         List<XmlClass> classes = new ArrayList<XmlClass>();
-        classes.add(new XmlClass("ch.so.agi.oereb.cts.test.GetEGRID"));
+        classes.add(new XmlClass("ch.so.agi.oereb.cts.test.GetEGRIDNoParameters"));
         test.setXmlClasses(classes) ;
 
         List<XmlSuite> suites = new ArrayList<XmlSuite>();

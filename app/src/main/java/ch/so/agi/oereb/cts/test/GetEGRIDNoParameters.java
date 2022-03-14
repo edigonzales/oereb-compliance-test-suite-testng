@@ -6,14 +6,39 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-public class GetEGRID {
+/**
+ * [{@code Test}] Submits a minimal GetFeature request (without a filter
+ * asdfadf
+ *
+ */
+@Test(groups = { "GetEGRID" })
+public class GetEGRIDNoParameters {
 
+    // Daten requesten
     @BeforeClass
     public void beforeClass(ITestContext context) {
         String value = context.getCurrentXmlTest().getParameter("baseUrl");
         System.err.println("webdriver.deviceName.iPhone = " + value);
     }
 
+    /*
+     * en, gnss, nbident+nummer, strasse etc.-> class name GetEGRIDByXXX?
+     * 
+     * 
+     * 
+     * 1. Statuscode
+     * 2. Schemakonformität
+     * 3. nbident und egrid string.length
+     * 
+     * mit Parameter -> kann man extenden?
+     * 4. geometry vorhanden? (wenn sie vorhanden ist, wird Konformität durch Schemaprüfung validiert).
+     * 
+     * Prüfung mit x/y ins Nirvana:
+     * - Statuscode
+     */
+    
+    
+    
     @Test(description="GetEGRID-Antwort muss schemakonform sein.")
     @Parameters({"baseUrl"}) 
     public void schemaValidation(String baseUrl) {
@@ -27,5 +52,15 @@ public class GetEGRID {
         Assert.assertEquals("bar", "bar");
     }
 
+    
+    public class TestBar {
+        @Test
+        public void testBar2() {
+            int expected = 4;
+            Assert.assertEquals(2 + 2, expected);
+            System.out.println("testBar2");
+        }
+
+    }
 
 }
