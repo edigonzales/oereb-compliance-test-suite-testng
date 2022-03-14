@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 
 /**
  * [{@code Test}] Submits a minimal GetFeature request (without a filter
- * asdfadf
+ * asdfadf.
  *
  */
 @Test(groups = { "GetEGRID" })
@@ -23,6 +23,9 @@ public class GetEGRIDNoParameters {
 
     /*
      * en, gnss, nbident+nummer, strasse etc.-> class name GetEGRIDByXXX?
+     * BAsisklasse. Jede Variante erweitert dieses Klasse. Parameter ist die
+     * vollständige Url. Oder doch was mit Dataprovider? Dieser müsste aber
+     * konfiguierbar sein.
      * 
      * 
      * 
