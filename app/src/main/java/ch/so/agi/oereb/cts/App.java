@@ -13,6 +13,10 @@ import org.testng.xml.XmlTest;
 public class App {
     
     public static void main(String[] args) {
+        
+        //sdi-health-check:
+        // "Check"Config-Klasse
+        
         Map<String,String> params = new HashMap<String,String>();
         params.put("baseUrl", "https://prozessor-oereb.ur.ch/oereb/");
         params.put("enCoord", "2690481.2,1195464.8");

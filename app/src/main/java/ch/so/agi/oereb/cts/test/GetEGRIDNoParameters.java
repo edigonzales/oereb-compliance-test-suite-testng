@@ -11,6 +11,21 @@ import org.testng.annotations.Test;
  * asdfadf.
  *
  */
+/**
+ * Tests the response to a GetFeature request that returns a selection of
+ * features matching specified criteria. The request must include one or more
+ * stored query (wfs:StoredQuery) or ad hoc query (wfs:Query) expressions. An ad
+ * hoc query element may contain projection clauses (wfs:PropertyName), a
+ * selection clause (fes:Filter), or a sorting clause (fes:SortBy).
+ * 
+ * A successful response entity must include a schema reference (using the
+ * xsi:schemaLocation attribute) that is sufficient to validate the response.
+ * 
+ * @see "Kapitel 2.4: xxx ddf , Seite 7"
+ * @see "ISO 19142:2010, cl. 7.8:  Use of the schemaLocation attribute"
+ * @see "ISO 19143:2010, Geographic information -- Filter encoding"
+ */
+
 @Test(groups = { "GetEGRID" })
 public class GetEGRIDNoParameters {
 
