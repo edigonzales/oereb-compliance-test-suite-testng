@@ -1,4 +1,4 @@
-package ch.so.agi.oereb.cts.test;
+package ch.so.agi.oereb.cts.test.xml;
 
 import org.testng.Assert;
 import org.testng.ITestContext;
@@ -27,14 +27,14 @@ import org.testng.annotations.Test;
  */
 
 @Test(groups = { "GetEGRID" })
-public class GetEGRIDNoParameters {
+public class GetEGRIDNoParameters extends GetEGRIDImpl {
 
     // Daten requesten
-    @BeforeClass
-    public void beforeClass(ITestContext context) {
-        String value = context.getCurrentXmlTest().getParameter("baseUrl");
-        System.err.println("webdriver.deviceName.iPhone = " + value);
-    }
+//    @BeforeClass
+//    public void beforeClass(ITestContext context) {
+//        String value = context.getCurrentXmlTest().getParameter("baseUrl");
+//        System.err.println("webdriver.deviceName.iPhone = " + value);
+//    }
 
     /*
      * en, gnss, nbident+nummer, strasse etc.-> class name GetEGRIDByXXX?
@@ -54,31 +54,37 @@ public class GetEGRIDNoParameters {
      * Prüfung mit x/y ins Nirvana:
      * - Statuscode
      */
-    
-    
-    
-    @Test(description="GetEGRID-Antwort muss schemakonform sein.")
-    @Parameters({"baseUrl"}) 
-    public void schemaValidation(String baseUrl) {
-        System.out.println("Inside testPrintMessage()");
-        System.out.println(baseUrl);
-        Assert.assertEquals("foo", "bar", "message, message, message");
-    }
-    
-    @Test(alwaysRun = true, dependsOnMethods = {"schemaValidation"})
-    public void givenValidEmail_whenLoggedIn_thenTrue() {
-        Assert.assertEquals("bar", "bar");
+ 
+
+    @Test
+    public void lalelu() {
+        System.out.println(this.getClass().getName() + ": lalelu");
     }
 
     
-    public class TestBar {
-        @Test
-        public void testBar2() {
-            int expected = 4;
-            Assert.assertEquals(2 + 2, expected);
-            System.out.println("testBar2");
-        }
+    
+//    @Test(description="GetEGRID-Antwort muss schemakonform sein.")
+//    @Parameters({"baseUrl"}) 
+//    public void schemaValidation(String baseUrl) {
+//        System.out.println("Inside testPrintMessage()");
+//        System.out.println(baseUrl);
+//        Assert.assertEquals("foo", "bar", "message, message, message");
+//    }
+//    
+//    @Test(alwaysRun = true, dependsOnMethods = {"schemaValidation"})
+//    public void givenValidEmail_whenLoggedIn_thenTrue() {
+//        Assert.assertEquals("bar", "bar");
+//    }
 
-    }
+    
+//    public class TestBar {
+//        @Test
+//        public void testBar2() {
+//            int expected = 4;
+//            Assert.assertEquals(2 + 2, expected);
+//            System.out.println("testBar2");
+//        }
+//
+//    }
 
 }
